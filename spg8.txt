@@ -1,3 +1,7 @@
+To run this code type:
+
+python3 spg8.py 1 2
+
 This code demonstrates the usage of command-line arguments, mathematical operations, and function calls in Python. Here's a breakdown of the code:
 
     Import statement:
