@@ -1,0 +1,24 @@
+This code demonstrates the concept of inheritance in Python and the usage of class methods. Here's a breakdown of the code:
+
+    Class definition:
+        The code defines a class named p that inherits from the base object class.
+        The class p has three methods: x(self, n), y(self), and z(self, foo: str = "not given", bar: int = 999).
+        The x() method takes a parameter n and returns n * 2.
+        The y() method prints the string "Parent y".
+        The z() method takes two parameters, foo (defaulted to "not given") and bar (defaulted to 999). It returns a formatted string containing the values of foo and the character representation of bar.
+
+    Inheritance:
+        The code defines a class named c that inherits from the class p.
+        The class c overrides the x() method from the parent class. It divides the input n by 2 instead of multiplying it by 2.
+        The y() method in c calls the x() method from the same class, passing it the value 15, and prints the result. It then calls the y() method from the parent class using the super() function. Finally, it prints the string "super duper".
+
+    Instance creation:
+        The code creates two instances of the classes: d as an instance of p and s as an instance of c.
+
+    Method calls:
+        The code calls the y() method on both instances (d.y() and s.y()), which prints different messages based on whether the method is called on the p or c class.
+        The code calls the x() method on both instances (d.x(10) and s.x(20)), which performs different operations based on whether the method is called on the p or c class.
+        The code calls the z() method on both instances with different arguments (d.z("char enc:", 127773) and s.z("number ?? is:", 127774)), printing the formatted strings based on the input values.
+
+In summary, this code demonstrates class inheritance, method overriding, and method calls in Python. The c class inherits from the p class and overrides the x() method. It also calls the parent class's y() method using the super() function. 
+Instances of both classes are created, and different methods are called on each instance, showcasing the behavior of inherited and overridden methods.

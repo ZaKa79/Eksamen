@@ -1,0 +1,35 @@
+This code demonstrates the usage of command-line arguments, mathematical operations, and function calls in Python. Here's a breakdown of the code:
+
+    Import statement:
+        The code imports the sys module, which provides access to system-specific parameters and functions.
+
+    Command-line arguments:
+        The code expects two command-line arguments to be passed when running the script (e.g., python script.py 1 2).
+        It assigns the values of the command-line arguments to variables s, bi, and he using sys.argv.
+        sys.argv is a list in Python that contains the command-line arguments passed to the script.
+        Here, bi and he are expected to be integers, so they are converted from strings to integers using the int() function.
+
+    Function definitions:
+        The code defines three functions: main(b, c), p(), and u(pa).
+
+    main(b, c) function:
+        This function takes two parameters, b and c, and multiplies them to obtain the result d.
+        It then prints the binary representation of d using bin() and the hexadecimal representation using hex().
+        Finally, it returns the value of d.
+
+    p() function:
+        This function calls the main() function, passing bi and he as arguments, and assigns the result to the variable ps.
+        It then calls the u() function, passing ps as an argument.
+
+    u(pa) function:
+        This function takes a parameter pa and performs a loop that runs 10 times (from i = 10 to i > 0).
+        In each iteration, it calculates val as pa raised to the power of i.
+        It then prints the decimal, binary, and hexadecimal representations of val using bin() and hex().
+        After each iteration, i is decremented by 1.
+
+    Function calls:
+        The code calls the p() function, which starts the execution of the program.
+        The p() function, in turn, calls the main() and u() functions.
+
+In summary, this code takes two command-line arguments, performs mathematical operations on them, and prints the results in binary and hexadecimal formats. 
+It demonstrates the usage of command-line arguments, function calls, and basic mathematical operations in Python.

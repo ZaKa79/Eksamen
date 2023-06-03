@@ -1,0 +1,48 @@
+The provided code showcases the usage of classes and objects in Python. Here's a breakdown of the code:
+
+    Import statement:
+        The code imports a module named mystuff.
+
+    Class MyStuff:
+        This class is defined using the class keyword.
+        It inherits from the base class object.
+        The __init__ method is a special method that serves as the constructor for the class. It initializes an instance variable tangerine with the value "And now a thousand years between".
+        The apple method prints the message "I AM CLASSY APPLES!".
+
+    Accessing module-level variable:
+        The code tries to access a variable tangerine from the mystuff module using mystuff.tangerine.
+
+    Reassigning mystuff:
+        The code assigns the result of calling the apple method from the mystuff module to the variable mystuff. This implies that the mystuff variable is reassigned from the module to the return value of the apple method.
+
+    Dictionary assignment:
+        The code assigns a dictionary with a single key-value pair ('apple': 'I AM APPLES!') to the mystuff variable.
+
+    Accessing dictionary value:
+        The code prints the value associated with the key 'apple' from the mystuff dictionary.
+
+    Creating an instance of MyStuff class:
+        The code creates an object thing from the MyStuff class using the syntax thing = MyStuff().
+        This calls the __init__ method of the class, initializing the tangerine instance variable.
+        The thing object now has access to the methods and variables defined in the MyStuff class.
+
+    Calling methods and accessing variables on the object:
+        The code calls the apple method of the thing object using thing.apple(), which prints "I AM CLASSY APPLES!".
+        It accesses the tangerine instance variable of the thing object using print(thing.tangerine), which prints "And now a thousand years between".
+
+    Class Song:
+        This class is defined using the class keyword.
+        It also inherits from the base class object.
+        The __init__ method initializes an instance variable lyrics with the provided argument.
+        The sing_me_a_song method iterates over the lines in the lyrics list and prints each line.
+
+    Creating instances of the Song class:
+        The code creates two objects, happy_bday and bulls_on_parade, from the Song class.
+        The __init__ method of the class is called for each object, and the lyrics argument is passed to initialize the respective lyrics instance variables.
+
+    Calling methods on the objects:
+        The code calls the sing_me_a_song method on the happy_bday object, which prints the lyrics of the happy birthday song.
+        It also calls the sing_me_a_song method on the bulls_on_parade object, which prints the lyrics of the song "Bulls on Parade".
+
+In summary, the code demonstrates the usage of classes and objects in Python, including defining classes, creating objects, accessing instance variables and methods, and utilizing inheritance. 
+It also shows how to import modules and access variables and functions defined within them.

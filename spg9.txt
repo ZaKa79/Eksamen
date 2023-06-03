@@ -1,0 +1,35 @@
+This code demonstrates the usage of SQLite in Python to create a database, create a table, insert data into the table, and perform a login validation query. Here's a breakdown of the code:
+
+    Import statement:
+        The code imports the sqlite3 module, which provides an interface to SQLite databases.
+
+    Database connection:
+        The code establishes a connection to an SQLite database named 'users.db' using sqlite3.connect() and assigns the connection object to the variable conn.
+        It also creates a cursor object c to interact with the database.
+
+    Table creation:
+        The code uses the cursor's execute() method to execute an SQL query that creates a table named 'users' if it doesn't already exist.
+        The CREATE TABLE IF NOT EXISTS statement specifies the table schema with columns: username (text) and password (text).
+
+    Data insertion:
+        The code uses the execute() method to insert data into the 'users' table.
+        Three INSERT INTO statements are executed, each inserting a username-password pair into the table.
+
+    Committing changes:
+        The code calls conn.commit() to commit the changes made to the database.
+
+    validate_login(username, password) function:
+        This function takes a username and password as parameters.
+        It executes an SQL SELECT query using the execute() method, searching for a row in the 'users' table that matches the provided username and password.
+        The username and password values are passed as parameters to the query using parameter substitution to prevent SQL injection.
+        The fetchone() method retrieves the first row of the result set.
+        If a result is found (i.e., result is not None), the function returns True, indicating successful login. Otherwise, it returns False.
+
+    Login validation:
+        The code calls the validate_login() function twice, each time with different username-password combinations, and prints the returned result (True or False).
+
+    Database connection closing:
+        The code calls conn.close() to close the database connection.
+
+In summary, this code demonstrates the basic usage of SQLite in Python to create a database, create a table, insert data, and perform a login validation query. 
+It shows how to execute SQL queries, retrieve results, and utilize parameter substitution to prevent SQL injection.

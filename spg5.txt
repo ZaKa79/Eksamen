@@ -1,0 +1,39 @@
+This code demonstrates the usage of SQLite in Python to create a database, create a table, insert data into the table, and execute a SELECT query. Here's a breakdown of the code:
+
+    Import statement:
+        The code imports the sqlite3 module, which provides an interface to SQLite databases.
+
+    Database connection:
+        The code establishes a connection to an SQLite database named 'test_database.db' using sqlite3.connect() and assigns the connection object to the variable conn.
+        It also creates a cursor object c to interact with the database.
+
+    Table creation:
+        The code uses the cursor's execute() method to execute an SQL query that creates a table named 'products' if it doesn't already exist.
+        The CREATE TABLE IF NOT EXISTS statement specifies the table schema with columns: product_id (INTEGER PRIMARY KEY), product_name (TEXT), and price (INTEGER).
+
+    Data insertion:
+        The code uses another execute() method call to insert data into the 'products' table.
+        The INSERT INTO statement specifies the columns to insert data into (product_id, product_name, and price) and provides the corresponding values in a multi-valued VALUES clause.
+        Each set of values in parentheses represents a separate row to be inserted.
+
+    Committing changes:
+        The code calls conn.commit() to commit the changes made to the database.
+
+    SELECT query:
+        The code executes a SELECT query using c.execute().
+        The SELECT statement retrieves all rows from the 'products' table where the price is less than 400.
+        The result set is obtained using c.fetchall() and assigned to the variable rset.
+
+    Result processing and output:
+        The code prints the row count of the result set using an f-string (len(rset)).
+        It then iterates over each row in the result set using a for loop.
+        Inside the loop, it prints the name and price values of each row using an f-string (row[1] and row[2] respectively).
+
+    Error handling:
+        The code includes exception handling using a try-except block.
+        If any SQLite-related error occurs during the execution of the SQL statements, it catches the sqlite3.Error exception and prints the error message.
+
+    Database connection closing:
+        The code uses a finally block to ensure that the database connection is closed using conn.close() regardless of whether an exception occurred or not.
+
+In summary, this code demonstrates the basic usage of SQLite in Python to create a database, create a table, insert data, execute a SELECT query, retrieve and process the results, and handle potential errors.
